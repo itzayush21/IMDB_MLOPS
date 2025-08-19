@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/449016673230204942/a28565e7ed3a424a8f1531ccfe5696d4/artifacts
+end_time: 1755560184514
+entry_point_name: ''
+experiment_id: '449016673230204942'
+lifecycle_stage: active
+run_id: a28565e7ed3a424a8f1531ccfe5696d4
+run_name: funny-jay-447
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755560178011
+status: 3
+tags: []
+user_id: itzayush21

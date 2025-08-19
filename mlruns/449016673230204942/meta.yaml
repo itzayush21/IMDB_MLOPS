@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/449016673230204942
+creation_time: 1755560177785
+experiment_id: '449016673230204942'
+last_update_time: 1755560177785
+lifecycle_stage: active
+name: my-IMDB-Sentiment-Analysis-Experiment
