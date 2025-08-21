@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 # Below code block is for production use
 # -------------------------------------------------------------------------------------
 # Set up DagsHub credentials for MLflow tracking
-'''dagshub_token = os.getenv("CAPSTONE_TEST")
+dagshub_token = os.getenv("CAPSTONE_TEST")
 if not dagshub_token:
     raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
 
@@ -25,13 +25,13 @@ dagshub_url = "https://dagshub.com"
 repo_owner = "itzayush21"
 repo_name = "IMDB_MLOPS"
 # Set up MLflow tracking URI
-mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')'''
+mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 # -------------------------------------------------------------------------------------
 
 
 # Below code block is for local use
 # -------------------------------------------------------------------------------------
-mlflow.set_tracking_uri('http://127.0.0.1:8080')
+#mlflow.set_tracking_uri('http://127.0.0.1:8080')
 #dagshub.init(repo_owner='itzayush21', repo_name='IMDB_MLOPS', mlflow=True)
 # ---------------------------------------------------------------------------
 

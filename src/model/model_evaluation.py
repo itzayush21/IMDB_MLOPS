@@ -14,7 +14,7 @@ from src.logger import logging
 # Below code block is for production use
 # -------------------------------------------------------------------------------------
 # Set up DagsHub credentials for MLflow tracking
-'''dagshub_token = os.getenv("CAPSTONE_TEST")
+dagshub_token = os.getenv("CAPSTONE_TEST")
 if not dagshub_token:
     raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
 
@@ -26,13 +26,13 @@ repo_owner = "itzayush21"
 repo_name = "IMDB_MLOPS"
 
 # Set up MLflow tracking URI
-mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')'''
+mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 # -------------------------------------------------------------------------------------
 
 # Below code block is for local use
 # -------------------------------------------------------------------------------------
-mlflow.set_tracking_uri("http://127.0.0.1:8080")
-dagshub.init(repo_owner='itzayush21', repo_name='IMDB_MLOPS', mlflow=True)
+'''mlflow.set_tracking_uri("http://127.0.0.1:8080")
+dagshub.init(repo_owner='itzayush21', repo_name='IMDB_MLOPS', mlflow=True)'''
 # -------------------------------------------------------------------------------------
 
 
@@ -134,7 +134,7 @@ def main():
             # Log model to MLflow
             mlflow.sklearn.log_model(clf, name="model")
 
-            mlflow.log_artifact('./models/model.pkl', artifact_path="model")
+            #mlflow.log_artifact('./models/model.pkl', artifact_path="model")
             
             # Save model info
             experiment_id = run.info.experiment_id
