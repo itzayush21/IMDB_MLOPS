@@ -89,6 +89,7 @@ def evaluate_model(clf, X_test: np.ndarray, y_test: np.ndarray) -> dict:
 def save_metrics(metrics: dict, file_path: str) -> None:
     """Save the evaluation metrics to a JSON file."""
     try:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)  # ✅ ensure dir exists
         with open(file_path, 'w') as file:
             json.dump(metrics, file, indent=4)
         logging.info('Metrics saved to %s', file_path)
@@ -96,16 +97,19 @@ def save_metrics(metrics: dict, file_path: str) -> None:
         logging.error('Error occurred while saving the metrics: %s', e)
         raise
 
-def save_model_info(exp_id:str,run_id: str, model_path: str, file_path: str) -> None:
+
+def save_model_info(exp_id: str, run_id: str, model_path: str, file_path: str) -> None:
     """Save the model run ID and path to a JSON file."""
     try:
-        model_info = {'exp_id': exp_id,'run_id': run_id, 'model_path': model_path}
+        model_info = {'exp_id': exp_id, 'run_id': run_id, 'model_path': model_path}
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)  # ✅ ensure dir exists
         with open(file_path, 'w') as file:
             json.dump(model_info, file, indent=4)
         logging.debug('Model info saved to %s', file_path)
     except Exception as e:
         logging.error('Error occurred while saving the model info: %s', e)
         raise
+
 
 def main():
     mlflow.set_experiment("my-IMDB-Sentiment-Analysis-Experiment")
@@ -132,7 +136,7 @@ def main():
                     mlflow.log_param(param_name, param_value)
             
             # Log model to MLflow
-            mlflow.sklearn.log_model(clf, name="model")
+            mlflow.sklearn.log_model(clf, "model")
 
             #mlflow.log_artifact('./models/model.pkl', artifact_path="model")
             
