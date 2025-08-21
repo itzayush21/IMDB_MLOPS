@@ -19,14 +19,14 @@ class TestModelLoading(unittest.TestCase):
         os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
         os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
-        dagshub_url = "IMDB_Sentiment_Model"
+        dagshub_url = "https://dagshub.com"
         repo_owner = "itzayush21"
         repo_name = "IMDB_MLOPS"
         # Set up MLflow tracking URI
         mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
         # Load the new model from MLflow model registry
-        cls.new_model_name = ""
+        cls.new_model_name = "IMDB_Sentiment_Model"
         cls.new_model_version = cls.get_latest_model_version(cls.new_model_name)
         cls.new_model_uri = f'models:/{cls.new_model_name}/{cls.new_model_version}'
         cls.new_model = mlflow.pyfunc.load_model(cls.new_model_uri)
