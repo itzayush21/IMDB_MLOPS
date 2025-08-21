@@ -38,3 +38,10 @@ jobs:
 
         run: |
           dvc repro
+
+
+      - name: Run Flask app tests
+        if: success()
+        env:
+          CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
+        run: python -m unittest tests/test_flask_app.py
