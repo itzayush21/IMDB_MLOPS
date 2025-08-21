@@ -215,3 +215,23 @@ MIT License © 2025 – Ayush Kumar
 <img width="1493" height="731" alt="Screenshot 2025-08-17 161823" src="https://github.com/user-attachments/assets/887f33fd-a49d-4674-9f35-a332f656f202" />
 <img width="952" height="793" alt="Screenshot 2025-08-17 155059" src="https://github.com/user-attachments/assets/363c1ae8-f737-448f-8edd-71be3734c963" />
 
+
+
+
+# GITHUB ACTIONS
+
+<img width="1887" height="723" alt="image" src="https://github.com/user-attachments/assets/3adea5c9-3642-4247-9c47-4189a54af422" />
+
+
+<img width="1406" height="640" alt="image" src="https://github.com/user-attachments/assets/9bfa1ca5-6857-4b92-ae37-e7c83ac17589" />
+
+
+<img width="1854" height="868" alt="image" src="https://github.com/user-attachments/assets/71add755-f3ae-4ca7-a9f5-df7d2e777eaf" />
+
+
+
+
+
+
+
+
