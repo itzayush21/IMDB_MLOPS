@@ -18,7 +18,7 @@ class s3_operations:
         self.bucket_name = os.getenv("S3_BUCKET_NAME")
         aws_access_key = os.getenv("AWS_ACCESS_KEY")
         aws_secret_key = os.getenv("AWS_SECRET_KEY")
-        region_name = os.getenv("AWS_REGION", "us-east-1")
+        region_name = "us-east-1"
 
         self.s3_client = boto3.client(
             's3',
